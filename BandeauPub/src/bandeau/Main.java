@@ -42,6 +42,8 @@ public class Main {
  		repetitions.add(1);
  		mesEffets.add(rotatedroite180);
  		repetitions.add(1);
+ 		mesEffets.add(chgmtcouleur);
+ 		repetitions.add(1);
  		
  		Scenario s1 = new Scenario(mesEffets,repetitions);
  		
