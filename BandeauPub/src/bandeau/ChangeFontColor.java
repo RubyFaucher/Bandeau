@@ -17,6 +17,7 @@ public class ChangeFontColor extends Effet {
 		g = rand.nextInt(255);
 		b = rand.nextInt(255);
 		bandeau.setForeground(new Color(r,g,b));
+		bandeau.sleep(1000);
 		
 	}
 }

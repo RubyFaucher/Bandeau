@@ -36,6 +36,6 @@ public class Rotation extends Effet {
 				}
 			}
 		}
-
+		bandeau.sleep(1000);
 	}
 }

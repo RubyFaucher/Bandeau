@@ -11,43 +11,54 @@ public class Main {
     
     public static void main(String[] args) {
     		Bandeau bandeau = new Bandeau();
-    		Zoom zoom = new Zoom(bandeau);
- 		Rotation rotategauche90=new Rotation(bandeau,"gauche",90);
- 		Rotation rotatedroite180=new Rotation(bandeau,"droite",180);
- 		AffichageColore aff=new AffichageColore(bandeau,"Bla bla");
- 		ChangeFontColor chgmtcouleur=new ChangeFontColor(bandeau);
- 		ChangeBackground background=new ChangeBackground(bandeau);
- 		
  		List<Effet> mesEffets = new ArrayList<Effet>();
  		List<Integer> repetitions = new ArrayList<Integer>();
     		
+ 		
     		bandeau.sleep(2000);
     		
     		
-    		mesEffets.add(aff);
+    		mesEffets.add(new AffichageColore(bandeau,"3..2..1.."));
  		repetitions.add(1);
- 		mesEffets.add(background);
+ 		mesEffets.add(new ChangementMessage(bandeau,"GO!!"));
  		repetitions.add(1);
- 		mesEffets.add(zoom);
+ 		mesEffets.add(new ChangementMessage(bandeau,"On change le fond!"));
  		repetitions.add(1);
- 		mesEffets.add(background);
+ 		
+ 		mesEffets.add(new ChangeBackground(bandeau));
  		repetitions.add(1);
- 		mesEffets.add(chgmtcouleur);
+ 		
+ 		mesEffets.add(new ChangementMessage(bandeau,"ZooOOM"));
  		repetitions.add(1);
- 		mesEffets.add(rotategauche90);
+ 		mesEffets.add(new Zoom(bandeau,"zoom"));
  		repetitions.add(1);
- 		mesEffets.add(background);
+ 		mesEffets.add(new ChangementMessage(bandeau,"ZOOoom"));
  		repetitions.add(1);
- 		mesEffets.add(chgmtcouleur);
+ 		mesEffets.add(new Zoom(bandeau,"dezoom"));
  		repetitions.add(1);
- 		mesEffets.add(rotatedroite180);
+ 		mesEffets.add(new ChangeBackground(bandeau));
  		repetitions.add(1);
- 		mesEffets.add(chgmtcouleur);
+ 		mesEffets.add(new ChangementMessage(bandeau,"Encore de la couleur!"));
+ 		repetitions.add(1);
+ 		mesEffets.add(new ChangeFontColor(bandeau));
+ 		repetitions.add(2);
+ 		mesEffets.add(new ChangementMessage(bandeau,"Attention ça tourne"));
+ 		repetitions.add(1);
+ 		mesEffets.add(new ChangementMessage(bandeau,"Gauche.."));
+ 		repetitions.add(1);
+ 		mesEffets.add(new Rotation(bandeau,"gauche",90));
+ 		repetitions.add(1);
+ 		mesEffets.add(new ChangementMessage(bandeau,"Ou droite!"));
+ 		repetitions.add(1);
+ 		mesEffets.add(new Rotation(bandeau,"droite",180));
+ 		repetitions.add(1);
+ 		mesEffets.add(new ChangeFontColor(bandeau));
  		repetitions.add(1);
  		
  		Scenario s1 = new Scenario(mesEffets,repetitions);
  		
  		s1.play();
+ 		
  		
  		
 	

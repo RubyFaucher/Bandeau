@@ -21,7 +21,7 @@ public class AffichageColore extends Effet{
     		b = rand.nextInt(255);
     		bandeau.setMessage(this.message.substring(0,i+1));
     		bandeau.setForeground(new Color(r,g,b));
-    		bandeau.sleep(1000);
+    		bandeau.sleep(500);
     		
 		}
 }
